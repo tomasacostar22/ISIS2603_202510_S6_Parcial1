@@ -1,6 +1,9 @@
 package co.edu.uniandes.dse.parcial1.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
 
 @Data
@@ -10,5 +13,8 @@ public class RutaEntity extends BaseEntity {
     private String nombre;
     private String color;
     private String tipo;
+
+    @ManyToMany
+    private List<EstacionEntity> estaciones;
 
 }
